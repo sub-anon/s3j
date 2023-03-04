@@ -1,0 +1,15 @@
+# https://docs.bitnami.com/kubernetes/infrastructure/minio/configuration/
+auth:
+  rootUser: minio
+  rootPassword: minio123
+mode: distributed
+persistence:
+  size: 30Gi
+statefulset:
+  replicaCount: 2
+  zones: 1
+  drivesPerNode: 2
+resources:
+  requests:
+    memory: 1Gi
+    cpu: 1
